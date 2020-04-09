@@ -11,7 +11,7 @@ if (strlen($_SESSION['uid']==0)) {
 if(isset($_POST['submit']))
   {
     $eid=$_SESSION['uid'];
-    $eidd=$_POST['eidd'];
+   // $eidd=$_POST['eidd'];
       $coursepg=$_POST['coursepg'];
     $schoolclgpg=$_POST['schoolclgpg'];
     $yoppg=$_POST['yoppg'];
@@ -19,7 +19,7 @@ if(isset($_POST['submit']))
     
    
     
-    $query=mysqli_query($con, "update watchmenedu set name='$coursepg', age='$schoolclgpg', shift= '$yoppg', gateallocated='$pipg' where watchmenid='$eidd'");
+    $query=mysqli_query($con, "update watchmenedu set name='$coursepg', age='$schoolclgpg', shift= '$yoppg', gateallocated='$pipg' where watchmenid='$eid'");
     if ($query) {
     $msg="Your Details has been updated succeesfully.";
   }
@@ -75,7 +75,7 @@ if(isset($_POST['submit']))
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-4 text-gray-800">Edit My Education</h1>
+          <h1 class="h3 mb-4 text-gray-800">Edit My Details</h1>
 
 <p style="font-size:16px; color:red" align="center"> <?php if($msg){
     echo $msg;
@@ -84,7 +84,7 @@ if(isset($_POST['submit']))
 <form class="user" method="post" action="">
    <?php
  $cid=$_SESSION['uid'];
-$ret=mysqli_query($con,"select * from watchmenedu where watchmenid='$eidd'");
+$ret=mysqli_query($con,"select * from watchmenedu where watchmenid='$cid'");
 $num=mysqli_num_rows($ret);
 if($num>0){
 $cnt=1;
@@ -94,7 +94,7 @@ while ($row=mysqli_fetch_array($ret)) {
  
                <div class="row">
                 <div class="col-4 mb-3">WatchmenID</div>
-                   <div class="col-8 mb-3">   <input type="text" class="form-control form-control-user" id="eidd" name="eid" aria-describedby="emailHelp" value="<?php  echo $row['CoursePG'];?>"></div>
+                   <div class="col-8 mb-3">   <input type="text" class="form-control form-control-user" id="eid" name="eid" aria-describedby="emailHelp" value="<?php  echo $row['CoursePG'];?>"></div>
                     </div>  
                     <div class="row">
                       <div class="col-4 mb-3">Name </div>

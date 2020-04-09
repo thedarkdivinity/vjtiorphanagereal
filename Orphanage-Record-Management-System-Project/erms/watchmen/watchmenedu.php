@@ -11,7 +11,7 @@ if (strlen($_SESSION['uid']==0)) {
 if(isset($_POST['submit']))
   {
     $eid=$_SESSION['uid'];
-    $eidd=$_POST['eidd'];
+  //  $eidd=$_POST['eidd'];
       $coursepg=$_POST['coursepg'];
     $schoolclgpg=$_POST['schoolclgpg'];
     $yoppg=$_POST['yoppg'];
@@ -19,7 +19,7 @@ if(isset($_POST['submit']))
   
    
     
-     $query=mysqli_query($con, "insert into watchmenedu( watchmenid,name,age,shift,gateallocated) value('$eidd','$coursepg', '$schoolclgpg', '$yoppg', '$pipg')");
+     $query=mysqli_query($con, "insert into watchmenedu( watchmenid,name,age,shift,gateallocated) value('$eid','$coursepg', '$schoolclgpg', '$yoppg', '$pipg')");
     if ($query) {
     $msg="Your data has been submitted succeesfully.";
   }
@@ -128,7 +128,7 @@ if($row>0)
  
                <div class="row">
                 <div class="col-4 mb-3">WatchmenID</div>
-                   <div class="col-8 mb-3">   <input type="text" class="form-control form-control-user" id="eidd" name="eidd" aria-describedby="emailHelp" value=""></div>
+                   <div class="col-8 mb-3">   <input type="text" class="form-control form-control-user" id="eid" name="eid" aria-describedby="emailHelp" value=""></div>
                     </div>  
                     <div class="row">
                       <div class="col-4 mb-3">Name </div>
