@@ -1,0 +1,132 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    
+}
+body
+{
+    background-color: brown;
+    position: relative;
+}
+@font-face
+{
+    font-family: Sayush;
+    src: url('sayush.ttf');
+}
+.container-fluid
+{
+    margin-top: 0;
+    width:100%;
+    height:80px;
+    background-image: linear-gradient( purple,orange);
+    
+
+
+}
+.tex
+{
+    text-align: center;
+    font-family: Sayush;
+    font-size: medium;
+    padding-top: 15px;
+    text-shadow: 2px 3px 2px blue;
+    font-size: 30px;
+    transition: transform 2s;
+    color: black;
+}
+.tex:hover
+{
+    transform: rotate(360deg);
+}
+.container
+{
+    height: 460px;
+    background-image: linear-gradient( purple,orange) ;
+    margin-top: 30px;
+   
+
+}
+label
+{
+margin-top: 10px;
+font-family: Sayush;
+
+}
+#phone
+{
+    margin-top: 5px;
+}
+
+#fax
+{
+    margin-top: 5px;
+}
+#street
+{
+    margin-top: 5px;
+}
+#city
+{
+    margin-top: 5px;
+}
+#state
+{
+    margin-top: 5px;
+}
+button
+{
+    margin-top: 0px;
+    margin-left: 500px;
+    background-image: linear-gradient(purple,red);
+    transition: transform  2s linear;
+}
+
+button:hover
+{
+ transform: scale(2,2);
+}
+
+
+.container-fluid1
+{
+    width:100%;
+    height:80px;
+    background-image: linear-gradient( purple,orange);
+    position: relative;
+}
+.babywalk
+{
+    width: 100%;
+    height: 100px;
+    position: relative;
+    margin-top: 70px;
+}
+.baccha
+{
+    width: 140px;
+    height: 120px;
+    position: absolute;
+    left: 0;
+    animation-name: bab;
+    animation-duration:6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.hand
+{
+    margin-top: 70px;
+    width: 209px;
+    height: 120px;
+    position: absolute;
+    left: 74%;
+}
+@keyframes bab{
+    0%{left: 0%;}
+    100%{left:72%;}
+   
+}
+#pin
+{
+    width: 290px;
+}
