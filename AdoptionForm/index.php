@@ -1,25 +1,22 @@
 
 <?php
+session_start();
+error_reporting(0);
 include('connect.php');
-if(isset($_POST['submit']))
+if(isset($_POST['submit'])&&!empty($_POST['submit']))
 {
-  $name=htmlentities($_POST['name']);
-  $email=htmlentities($_POST['email']);
-  $phone=htmlentities($_POST['phone']);
-  $fax=htmlentities($_POST['fax']);
-  $street=htmlentities($_POST['street']);
-  $city=htmlentities($_POST['city']);
-  $state=htmlentities($_POST['state']);
-  $pin=htmlentities($_POST['pin']);
-  $insertquery="INSERT INTO `adoption`(`name`, `email`, `phone`, `fax`, `street`, `city`, `state`, `pin`) VALUES ('$name','$email','$phone','$fax','$street','$city','$state','$pin')";
+  $name=($_POST['name']);
+  $email=($_POST['email']);
+  $phone=($_POST['phone']);
+  $fax=($_POST['fax']);
+  $street=($_POST['street']);
+  $city=($_POST['city']);
+  $state=($_POST['state']);
+  $pin=($_POST['pin']);
+  $insertquery="INSERT INTO adoption (`name`, `email`, `phone`, `fax`, `street`, `city`, `state`, `pin`) VALUES ('$name','$email','$phone','$fax','$street','$city','$state','$pin')";
   $query=mysqli_query($conn,$insertquery);
-  if($query)
-  {
-    ?>
-    <script>
-      alert('Data inserted');
-      </script>
-      <?php 
+  if($query){
+    echo "inserted";
 
   }
 }
@@ -43,7 +40,7 @@ if(isset($_POST['submit']))
   <p class="tex">Adoption Requests</p>
 </div>
 <div class="container  p-5 bg-success ">
-  <form method="post" action="index.php">
+  <form method="post" action="">
     <div class="row">
       <div class="col">
         <label for="name">Name</label>
@@ -84,7 +81,7 @@ if(isset($_POST['submit']))
         <input type="number" class="form-control" placeholder="Enter pincode" name="pin" id="pin" required>
       
   
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" name="submit" value="submit" class="btn btn-primary" >Submit</button>
 
   </form>
   <div class="babywalk">
