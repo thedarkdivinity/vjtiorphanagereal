@@ -15,8 +15,13 @@ if(isset($_POST['submit'])&&!empty($_POST['submit']))
   $pin=($_POST['pin']);
   $insertquery="INSERT INTO adoption (`name`, `email`, `phone`, `fax`, `street`, `city`, `state`, `pin`) VALUES ('$name','$email','$phone','$fax','$street','$city','$state','$pin')";
   $query=mysqli_query($conn,$insertquery);
-  if($query){
-    echo "inserted";
+ if($query)
+  {
+    ?>
+    <script>
+      alert('Data inserted');
+      </script>
+      <?php 
 
   }
 }
