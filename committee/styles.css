@@ -1,0 +1,103 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+@font-face
+{
+    font-family: Sayush;
+    src: url('sayush.ttf');
+}
+.container-fluid
+{ display: block;
+    position: relative;
+    height: 115px;
+    margin-top: 0px;
+    text-align: center;
+    background-image: linear-gradient(purple,brown);
+    font-family: Sayush;
+    
+}
+.test
+{
+    position: absolute;
+    left: 32%;
+    color: black;
+    animation-name: come;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    text-shadow: 2px 3px 9px grey;
+    font-size: smaller;
+    text-decoration: underline blue;
+
+}
+@keyframes come {
+    0%{
+        left: 0%;
+    }
+    100%{
+        left: 32%;
+    }
+}
+.test:hover
+{
+    color: lawngreen;
+}
+.container
+{  display: block;
+    position: relative;
+     margin-top: 50px;
+    height: 569px;
+    width: auto;
+    background-image: linear-gradient(purple,brown); 
+    margin-left: 20px;
+    font-family: Sayush;
+    border: 1px solid red;
+    margin-bottom: 100px;
+    border-radius: 76px;
+
+}
+label
+{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+input
+{
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+button
+{ 
+    position: absolute;
+    left: 46%;
+    margin-top: 20px;   
+    background-image: linear-gradient(purple,green);
+    border-radius: 50px;
+    animation-name: but ;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    transition-property: transformation;
+    transition-duration: 3s;
+    transition-timing-function: linear;
+    
+
+
+}
+button:hover
+{
+    transform: scale(1.5,1.5);
+    background-image: linear-gradient(purple,brown);
+}
+@keyframes but
+{
+    0%{
+        left: 0%;
+    }
+    100%{
+        left:43%
+    }
+}
+body{
+    background-image: linear-gradient(purple,orange);
+}
