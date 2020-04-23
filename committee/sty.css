@@ -1,0 +1,91 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+@font-face
+{
+    font-family: Sayush;
+    src: url('sayush.ttf');
+}
+.whatever
+{   display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: chocolate;
+    align-items: center;
+    justify-content: center;
+}
+.container
+{
+    display: flex;
+    width: 500px;
+    height: 500px;
+    background-image: linear-gradient(purple,brown);
+    border: 1px solid red;
+   align-items: center;
+   justify-content: center;
+   font-family: Sayush;
+   border-radius: 50px;
+
+}
+.test
+{
+    position: absolute;
+   
+    color: black;
+    animation-name: come;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    text-shadow: 2px 3px 9px grey;
+    font-size: smaller;
+    transition: transform 3s linear;
+   
+
+}
+@keyframes come {
+    0%{
+        left: 0%;
+    }
+    100%{
+        left: 50%;
+    }
+}
+input
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container-fluid
+{ display: flex;
+    position: relative;
+    height: 115px;
+    margin-top: 0px;
+    
+    background-image: linear-gradient(purple,brown);
+    font-family: Sayush;
+    align-items: center;
+    justify-content: center;
+    
+}
+button
+{
+    margin-top: 5px;
+
+}
+.test:hover
+{
+    color: lawngreen;
+    text-decoration: underline blue;
+    transform: scale(1.5,1.5);
+}
+
+button{
+    background-image: linear-gradient(purple,brown);
+    transition: transform linear 6s;
+}
+button:hover
+{
+    transform: scale(1.5,1.5);
+    background-color: blue;
+}
