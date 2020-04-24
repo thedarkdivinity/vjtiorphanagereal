@@ -24,7 +24,7 @@
               </thead>
               <tbody>
                   <?php
-                  $conn=mysqli_connect("localhost","root","Sayush12","ermsdb");
+                  $conn=mysqli_connect("localhost","root","","ermsdb");
                   if($conn->connect_error){
                     die("Connection failed:".$conn->connect_error);
                   }
