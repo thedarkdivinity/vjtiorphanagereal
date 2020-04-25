@@ -35,6 +35,8 @@ $name=$row['name'];
 
             <button type="button" class="btn btn-info yo">LOGOUT</button>
 </a>
+<button type="button" class="btn btn-info yo"><a href="adoptdisplay.php">VIEW ADOPTIONS</a></button>
+
          </div>
         </div>
         </div>
