@@ -12,12 +12,8 @@ How to Use the Hope Orphanage Managemant System:
 
 5. Create a database with name ermsdb
 
-6. Import ermsdb.sql file(given inside the zip package in sql file folder)
+6. Import ermsdb(1).sql file(given inside the zip package in sql file folder)
 
-7.Run the script http://localhost/login/home.html
-
-Credential for user panel :
-
-username : testuser@gmail.com Password : Test@123
+7. Open home.html
 
 Credential for admin panel : username : admin Password : Test@123
